@@ -17,4 +17,7 @@ Current Version: 1.0.0 | Latest Edit: 19 Sept 2025
 5. Human Resource Management (Assigning work)
 
 ## NOTED:
-For Editing | Username: Test_user / Password: 0123
+For Editing | Username: Test_user / Password: 0123 | You can compile it into .exe by following these steps: 
+1. Install PyInstaller. Open your terminal and type the install command in. Command: pip install pyinstaller 
+2. Navigate to your script's directory Example: cd path\to\your\script\folder
+3. Run PyInstaller. Key in this command in terminal: pyinstaller --onefile --windowed "GUI To-do List.py"
