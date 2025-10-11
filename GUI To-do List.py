@@ -558,10 +558,9 @@ def main_window():
     root.mainloop()
 
 ### CODE TRIGGER ###
-
-running = input("Start the program (y/n): ").strip().lower()
-if running == "y":
+if __name__ == "__main__":
     display_login_window()
+
 
 
 
