@@ -1,44 +1,64 @@
-# "My Notion" Planner
+# "My Notion" Planner 📅
 
-## Introduction:
+## Introduction
 
-A Graphical User Interface (GUI) created as a task and event scheduling written in Python. The program use Tkinter module for the display window following by JSON and OS module for the data saver and loader. 
-The program is able to input both task and event, prioritize it, add details for memorization, and save the data on to the local device.
-Current Version: 1.0.1 | Latest Edit: 19 Sept 2025
+"My Notion" Planner is a **Graphical User Interface (GUI)** application for task and event scheduling, built entirely in **Python**.
 
-![Interface Picture](Interface.png)
+The application uses the **Tkinter** module for the user interface and the built-in **JSON** and **OS** modules for local data storage and retrieval.
 
-## Improvements:
+### Key Features:
+* Input and manage both tasks and events.
+* Prioritize items for better organization.
+* Add detailed notes and descriptions.
+* Securely save all planning data locally on your device.
 
-1. Interface improvement for better user experience
-2. Registration system for non preset accounts
-3. Alarm settings
-4. CPM - PERT Systems
-5. Human Resource Management (Assigning work)
+**Current Version:** 1.0.1 | **Latest Edit:** September 19, 2025
 
-## For Developers: Compiling the Python Script to a Standalone .EXE
+![Planner Interface Screenshot](Interface.png)
 
-If you want to create a standalone executable (.exe) file for Windows, you can use **PyInstaller**.
+---
+
+## Planned Improvements 🚀
+
+We are actively working on the following features:
+
+1.  **Interface Rework:** Enhancing the GUI for a more intuitive and modern user experience.
+2.  **User Registration:** Implementing a user registration system for non-preset accounts.
+3.  **Alarm Settings:** Adding customizable reminders and notifications.
+4.  **Project Management Tools:** Integrating **CPM-PERT** (Critical Path Method / Program Evaluation and Review Technique) functionality for complex projects.
+5.  **Human Resource Management:** Features for assigning and tracking work among team members.
+
+---
+
+## For Developers: Compiling to a Standalone .EXE
+
+If you want to create a standalone executable (`.exe`) file for Windows, you can use the **PyInstaller** package.
+
+**Note:** Since this is a GUI application, we use the `--windowed` flag to prevent the console window from opening when the program runs.
 
 1.  **Install PyInstaller**
-    * Open your command line (Terminal or Command Prompt) and run:
+    * Open your command line (Terminal or Command Prompt) and run the installation command:
         ```bash
         pip install pyinstaller
         ```
 
 2.  **Navigate to the Script Directory**
-    * Change your directory to the folder containing the script:
+    * Change your directory to the folder containing the main script (assuming the filename is still **`GUI To-do List.py`**):
         ```bash
         cd path\to\your\script\folder
         ```
 
-3.  **Compile to .EXE**
-    * Run the PyInstaller command. The `--onefile` flag creates a single executable, and `--windowed` prevents a console window from opening:
+3.  **Compile the Executable**
+    * Run the PyInstaller command:
         ```bash
         pyinstaller --onefile --windowed "GUI To-do List.py"
         ```
 
-**Result:** The final executable, **`GUI To-do List.exe`**, will be located in the newly created **`dist`** folder.
+**Result:** The final executable, **`GUI To-do List.exe`**, will be generated in the **`dist`** folder within your script's directory.
 
-## NOTED:
-For Editing | Username: Test_user / Password: 0123
+---
+
+## ⚠️ IMPORTANT NOTE
+
+Please ensure you **remove** or replace all placeholder test accounts and credentials before deploying or sharing the application. 
+However for only testing purpose | Username: Test_user / Password: 0123
