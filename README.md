@@ -12,6 +12,8 @@ The application uses the **Tkinter** module for the user interface and the built
 * Add detailed notes and descriptions.
 * Securely save all planning data locally on your device.
 
+---
+
 **Current Version:** 1.0.1 | **Latest Edit:** September 19, 2025
 
 ![Planner Interface Screenshot](Interface.png)
