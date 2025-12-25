@@ -1,38 +1,27 @@
-# "My Notion" Planner 📅
+# Final Project | Basic Python Programming
 
-## Introduction
+## Project Details:
 
 "My Notion" Planner is a **Graphical User Interface (GUI)** application for task and event scheduling, built entirely in **Python**.
-
 The application uses the **Tkinter** module for the user interface and the built-in **JSON** and **OS** modules for local data storage and retrieval.
-
-### Key Features:
-* Input and manage both tasks and events.
-* Prioritize items for better organization.
-* Add detailed notes and descriptions.
-* Securely save all planning data locally on your device.
 
 ---
 
-**Current Version:** 1.0.1 | **Latest Edit:** September 19, 2025
+## Project Status:
+
+| Detail | Value |
+| :--- | :--- |
+| **Current Version** | 1.0.1 |
+| **Latest Edit** | September 19, 2025 |
+
+---
 
 ![Planner Interface Screenshot](Interface.png)
 
 ---
 
-## Planned Improvements 🚀
 
-We are actively working on the following features:
-
-1.  **Interface Rework:** Enhancing the GUI for a more intuitive and modern user experience.
-2.  **User Registration:** Implementing a user registration system for non-preset accounts.
-3.  **Alarm Settings:** Adding customizable reminders and notifications.
-4.  **Project Management Tools:** Integrating **CPM-PERT** (Critical Path Method / Program Evaluation and Review Technique) functionality for complex projects.
-5.  **Human Resource Management:** Features for assigning and tracking work among team members.
-
----
-
-## For Developers: Compiling to a Standalone .EXE
+## For Developers: Compiling to a Standalone (.EXE):
 
 If you want to create a standalone executable (`.exe`) file for Windows, you can use the **PyInstaller** package.
 
@@ -60,7 +49,12 @@ If you want to create a standalone executable (`.exe`) file for Windows, you can
 
 ---
 
-## ⚠️ IMPORTANT NOTE
+## ⚠️ Deployment Note:
 
 Please ensure you **remove** or replace all placeholder test accounts and credentials before deploying or sharing the application. 
 However for only testing purpose | Username: Test_user / Password: 0123
+
+
+
+
+
