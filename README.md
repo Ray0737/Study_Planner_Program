@@ -16,7 +16,7 @@ The application uses the **Tkinter** module for the user interface and the built
 
 ---
 
-![Planner Interface Screenshot](Interface.png)
+![Planner Interface Screenshot](UI.png)
 
 ---
 
