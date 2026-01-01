@@ -35,18 +35,18 @@ current_user = None
 
 ### JSON FILE SYSTEM ###
 
-def get_data_file_path(username): # Setting up name for the file
+def get_data_file_path(username):
     return f"{username}_tasks_events.json"
 
 def save_data_to_json():
     global current_user, tree, event_tree
     
-    if not current_user: # Verifying user is in the preset
+    if not current_user:
         messagebox.showerror("Error", "No user logged in to save data.")
         return
     
-    tasks = [] #Store task value in a dict which is a subset of a list
-    for item in tree.get_children(): 
+    tasks = []
+    for item in tree.get_children():
         task_data = tree.item(item, 'values')
         if len(task_data) >= 7:
             tasks.append({
@@ -59,7 +59,7 @@ def save_data_to_json():
                 "priority": task_data[6]
             })
     
-    events = [] #Store event value in a dict which is a subset of a list
+    events = []
     for item in event_tree.get_children():
         event_data = event_tree.item(item, 'values')
         if len(event_data) >= 5:
@@ -76,7 +76,7 @@ def save_data_to_json():
         "events": events
     }
     
-    file_path = get_data_file_path(current_user) #Save the data and format it so people can also read the data that was stored
+    file_path = get_data_file_path(current_user)
     try:
         with open(file_path, 'w') as f:
             json.dump(data_to_save, f, indent=4)
@@ -84,23 +84,23 @@ def save_data_to_json():
     except Exception as e:
         messagebox.showerror("Error", f"Failed to save data: {e}")
 
-def load_data_from_json(): 
+def load_data_from_json():
     global current_user, tree, event_tree
     
-    if not current_user: # Check if the user exist
+    if not current_user:
         return
         
-    file_path = get_data_file_path(current_user) 
+    file_path = get_data_file_path(current_user)
     if not os.path.exists(file_path):
         print(f"No data file found for {current_user}, starting with empty lists.")
         return
         
     try:
-        with open(file_path, 'r') as f: # Read data from file
+        with open(file_path, 'r') as f:
             data = json.load(f)
             
-        tree.delete(*tree.get_children()) 
-        event_tree.delete(*event_tree.get_children()) # Clear out if there's any data stuck in the tree view table
+        tree.delete(*tree.get_children())
+        event_tree.delete(*event_tree.get_children())
         
         if "tasks" in data:
             for task in data["tasks"]:
@@ -119,7 +119,7 @@ def load_data_from_json():
                     task.get("notes", ""),
                     task.get("by", ""),
                     task.get("priority", "")
-                ), tags=tags) # insert each value from the dict
+                ), tags=tags)
         
         if "events" in data:
             for event in data["events"]:
@@ -129,7 +129,7 @@ def load_data_from_json():
                     event.get("associates", ""),
                     event.get("date", ""),
                     event.get("notes", "")
-                )) # insert each value from the dict
+                ))
                 
         print(f"Data loaded successfully for {current_user}.")
     except Exception as e:
@@ -471,9 +471,9 @@ def main_window():
     clock_label.grid(row=0, column=8,columnspan=2 , pady=10)
     update_clock(clock_label)
 
-    tk.Button( task_frame, text="➕ Add Task", bg="#20942B", fg='#FFFFFF', command=add_task).grid(row=2, column=1, pady=10)
-    tk.Button( task_frame, text="✅ Mark as Completed", bg="#0091FF", fg='#FFFFFF', command=mark_as_completed).grid(row=2, column=2, pady=10)
-    tk.Button( task_frame, text="✂️ Delete Task", bg='#FF5733', fg='#FFFFFF', command=delete_task).grid(row=2, column=3, pady=10)
+    tk.Button( task_frame, text="➕ Add Task", bg="#11294F", fg='#FFFFFF', command=add_task).grid(row=2, column=1, pady=10)
+    tk.Button( task_frame, text="✅ Mark as Completed", bg="#11294F", fg='#FFFFFF', command=mark_as_completed).grid(row=2, column=2, pady=10)
+    tk.Button( task_frame, text="✂️ Delete Task", bg="#11294F", fg='#FFFFFF', command=delete_task).grid(row=2, column=3, pady=10)
     
 ### TO DO LIST TREE VIEW DISPLAY ###
 
@@ -526,10 +526,10 @@ def main_window():
     event_notes_entry = tk.Entry(event_frame, width=60)
     event_notes_entry.grid(row=1, column=12,columnspan=3, padx=5, pady=5, sticky="ew")
 
-    tk.Button(event_frame, text="➕ Add Event", bg="#20942B", fg='#FFFFFF', command=add_event).grid(row=2, column=12, pady=10)
-    tk.Button(event_frame, text="✅ Event Finished", bg="#0091FF", fg='#FFFFFF', command=mark_event_completed).grid(row=2, column=13, pady=10)
-    tk.Button(event_frame, text="✂️ Delete Event", bg='#FF5733', fg='#FFFFFF', command=delete_event).grid(row=2, column=14, pady=10)
-    tk.Button(event_frame, text="📅 Show Calendar", bg="#DA9500", fg='#FFFFFF', command=lambda: show_calendar_popup(event_date_entry)).grid(row=2, column=16, pady=10)
+    tk.Button(event_frame, text="➕ Add Event", bg="#11294F", fg='#FFFFFF', command=add_event).grid(row=2, column=12, pady=10)
+    tk.Button(event_frame, text="✅ Event Finished", bg="#11294F", fg='#FFFFFF', command=mark_event_completed).grid(row=2, column=13, pady=10)
+    tk.Button(event_frame, text="✂️ Delete Event", bg="#11294F", fg='#FFFFFF', command=delete_event).grid(row=2, column=14, pady=10)
+    tk.Button(event_frame, text="📅 Show Calendar", bg="#11294F", fg='#FFFFFF', command=lambda: show_calendar_popup(event_date_entry)).grid(row=2, column=16, pady=10)
 
 ### EVENT LIST TREE VIEW DISPLAY ###
 
@@ -558,9 +558,6 @@ def main_window():
     root.mainloop()
 
 ### CODE TRIGGER ###
+
 if __name__ == "__main__":
     display_login_window()
-
-
-
-
