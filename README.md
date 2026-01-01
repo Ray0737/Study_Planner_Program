@@ -11,6 +11,7 @@ The application uses the **Tkinter** module for the user interface and the built
 
 | Detail | Value |
 | :--- | :--- |
+| **Tools** | GUI - Tkinter |
 | **Current Version** | 1.0.1 |
 | **Latest Edit** | September 19, 2025 |
 
