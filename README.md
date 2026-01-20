@@ -5,6 +5,7 @@
 "My Notion" Planner is a **Graphical User Interface (GUI)** application for task and event scheduling, built entirely in **Python**.
 The application uses the **Tkinter** module for the user interface and the built-in **JSON** and **OS** modules for local data storage and retrieval.
 
+
 ---
 
 ## Project Status:
@@ -14,6 +15,7 @@ The application uses the **Tkinter** module for the user interface and the built
 | **Tools** | GUI - Tkinter |
 | **Current Version** | 1.0.1 |
 | **Latest Edit** | September 19, 2025 |
+| **Slide** | https://www.canva.com/design/DAGxtyG9tfc/K5777IxhW36veiXEsH30mQ/view?utm_content=DAGxtyG9tfc&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hba0d3f8f84 |
 
 ---
 
